@@ -15,6 +15,7 @@ import torch.nn.init as init
 from torchvision import models
 from torchvision.models.vgg import model_urls
 
+
 def init_weights(modules):
     for m in modules:
         if isinstance(m, nn.Conv2d):
@@ -27,7 +28,8 @@ def init_weights(modules):
             elif isinstance(m, nn.Linear):
                 m.weight.data.normal_(0, 0.01)
                 m.bias.data.zero_()
-                
+
+
 class vgg16_bn(torch.nn.Module):
     def __init__(self, pertrained=True, freeze=True):
         super(vgg16_bn, self).__init__()
