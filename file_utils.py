@@ -13,7 +13,7 @@ import cv2
 import imgproc
 
 # https://github.com/lengstrom/fast-style-transfer/blob/master/src/utils.pyから流用
-def get_file(img_dir):
+def get_files(img_dir):
     imgs, masks, xmls = list_files(img_dir)
     return imgs, masks, xmls
 
