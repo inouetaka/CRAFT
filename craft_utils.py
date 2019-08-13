@@ -40,7 +40,7 @@ def getDetBoxes_core(textmap, linkmap, text_threshold, link_threshold, low_text)
         if np.max(textmap[labels==k]) < text_threshold: continue
             
         #セグメンテーションマップの作成
-        segmap = np.zeros(textmap.shape, dtype=np.unit8)
+        segmap = np.zeros(textmap.shape, dtype=np.uint8)
         segmap[labels==k] = 255
         segmap[np.logical_and(link_score==1, text_score==0)] = 0
         x, y = stats[k, cv2.CC_STAT_LEFT], stats[k, cv2.CC_STAS_TOP]
