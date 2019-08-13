@@ -57,7 +57,7 @@ def getDetBoxes_core(textmap, linkmap, text_threshold, link_threshold, low_text)
         segmap[sy:ey, sx:ex] = cv2.dilate(segmap[sy:ey, sx:ex], kernel)
         
         #箱作成
-        np_contours = np.roll(np.array(np.where(segmap != 0)), 1, axis=0).transpose().reshaoe(-1, 2)
+        np_contours = np.roll(np.array(np.where(segmap != 0)), 1, axis=0).transpose().reshape(-1, 2)
         rectangle = cv2.minAreaRect(np_contours)
         box = cv2.boxPoints(rectangle)
         
