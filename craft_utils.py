@@ -43,7 +43,7 @@ def getDetBoxes_core(textmap, linkmap, text_threshold, link_threshold, low_text)
         segmap = np.zeros(textmap.shape, dtype=np.uint8)
         segmap[labels==k] = 255
         segmap[np.logical_and(link_score==1, text_score==0)] = 0
-        x, y = stats[k, cv2.CC_STAT_LEFT], stats[k, cv2.CC_STAS_TOP]
+        x, y = stats[k, cv2.CC_STAT_LEFT], stats[k, cv2.CC_STAT_TOP]
         w, h = stats[k, cv2.CC_STAT_WIDTH], stats[k, cv2.CC_STAT_HEIGHT]
         niter = int(math.sqrt(size * min(w, h) / (w * h)) * 2)
         sx, ex, sy, ey = x - niter, x + w + niter + 1, y -niter, y + h + niter + 1
