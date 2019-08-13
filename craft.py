@@ -44,10 +44,10 @@ class CRAFT(nn.Module):
         
         num_class = 2
         self.conv_cls = nn.Sequential(
-            nn.Conv2d(32, 32, kernel_size=3, padding=1), ReLU(inplace=True),
-            nn.Conv2d(32, 32, kernel_size=3, padding=1), ReLU(inplace=True),
-            nn.Conv2d(32, 16, kernel_size=3, padding=1), ReLU(inplace=True),
-            nn.Conv2d(16, 16, kernel_size=1), ReLU(inplace=True),
+            nn.Conv2d(32, 32, kernel_size=3, padding=1), nn.ReLU(inplace=True),
+            nn.Conv2d(32, 32, kernel_size=3, padding=1), nn.ReLU(inplace=True),
+            nn.Conv2d(32, 16, kernel_size=3, padding=1), nn.ReLU(inplace=True),
+            nn.Conv2d(16, 16, kernel_size=1), nn.ReLU(inplace=True),
             nn.Conv2d(16, num_class, kernel_size=1),
         )
         
