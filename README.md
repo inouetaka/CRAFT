@@ -1,3 +1,7 @@
+# 論文
+Englesh -> [Paper]()
+日本語 -> [CRAFT論文の日本語訳](https://github.com/inouetaka/CRAFT/wiki/論文-日本語訳)
+
 # 依存関係のインストール
 requirements
 * PyTorch>=0.4.1
